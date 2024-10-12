@@ -5,7 +5,7 @@ const Details = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
   const getData = async (url) => {
-    const response = await fetch(url);
+    const response = await fetch(`https://dummyjson.com/users/${id}`);
     const data = await response.json();
     console.log(data);
     const result = {
@@ -27,10 +27,10 @@ const Details = () => {
     setData(result); 
   };
 
-  const api = `https://dummyjson.com/users/${id}`;
+ 
 
   useEffect(() => {
-    getData(api);
+    getData();
   }, [id]);
 
   return (
