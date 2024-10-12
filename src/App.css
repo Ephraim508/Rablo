@@ -1,0 +1,298 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+height: 100vh;
+background-color: 	#faebd7;
+ 
+}
+.dashboard-container{
+  display: flex;
+  flex-direction: column;
+  
+}
+.heading{
+  width: 300px;
+  height: 55px;
+  padding: 5px;
+  background-color: bisque;
+  display: flex;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFBF00;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+.heading h1{
+  font-size: 26px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+
+}
+.search-container{
+ 
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  width: 100%;
+}
+
+.search-container input{
+  width: 260px;
+  height: 40px;
+  padding: 5px;
+  border: none;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  outline: none;
+  margin-right: 10px;
+}
+.search-container .search{
+  background-color: #FFA500;
+  color:black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 19px;
+  margin-top:5px;
+}
+
+
+.employee-data{
+  margin-top: 50px;
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 68vh;
+  overflow-y: scroll;
+  margin-left: 30px;
+  padding: 20px;
+}
+
+.card{
+  width: 350px;
+ 
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding: 13px;
+  border-radius: 10px;
+  background-color:white;
+  transition: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+ 
+}
+.delete-selected{
+  margin-left: 20px;
+  background-color: crimson;
+  color: white;
+}
+.check{
+  width: 20px;
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+.link{
+  text-decoration: none;
+}
+.card h1{
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 5px;
+  color: #FFBF00;
+}
+.card h2{
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 5px;
+  color: #FF00FF;
+}
+.card p{
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #40e0d0;
+}
+.card:hover{
+  transform: scale(1.1);
+
+}
+
+button{
+  width: 120px;
+  height: 40px;
+  padding: 5px;
+  border: none;
+  outline: none;
+  background-color:rgb(205, 45, 9);
+  color: white;
+  border-radius: 8px;
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: -15px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.display{
+  background-color: #FFA500;
+}
+::-webkit-scrollbar{
+  width: 15px;
+ 
+}
+
+
+::-webkit-scrollbar-track{
+  background: #d1e5ff;
+}
+
+
+::-webkit-scrollbar-thumb{
+ 
+  background: linear-gradient(#642bff,#ff22e6);
+  border-radius: 8px;
+}
+
+.details-container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.detail-heading{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 30px;
+  color: #FFA500;
+}
+
+.main-description-details{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 8%;
+}
+
+
+.description{
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s;
+
+}
+.description:hover{
+  transform: scale(1.1);
+}
+.description img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.de-description{
+  margin-left: 20px;
+}
+
+.de-description h1{
+  font-size: 22px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 6px;
+  color: #FF6347;
+}
+
+.de-description p{
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #FF00FF;
+}
+
+
+.company-details{
+
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 400px;
+  background-color: #ffff;
+  border-radius: 10px;
+  height: 180px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s;
+}
+.company-details:hover{
+  transform: scale(1.1);
+}
+.company-details h1{
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color:#FF6347;
+  margin-bottom: 8px;
+}
+.company-details p{
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #FF00FF;
+}
+
+.bank-details{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 400px;
+  background-color: #ffff;
+  border-radius: 10px;
+  height: 180px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s;
+
+}
+.bank-details:hover{
+  transform: scale(1.1);
+}
+.bank-details h1{
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  color:#FF6347;
+  margin-bottom: 8px;
+}
+
+.bank-details p{
+  font-size: 17px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #FF00FF;
+}
+
+.loading{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 10%;
+  font-size: 22px;
+}
