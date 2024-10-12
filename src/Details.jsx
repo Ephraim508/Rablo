@@ -4,35 +4,32 @@ import { useParams } from "react-router-dom";
 const Details = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
-  const getData = async (url) => {
-    const response = await fetch(`https://dummyjson.com/users/${id}`);
-    const data = await response.json();
-    console.log(data);
-    const result = {
-      Country: data.address.country,
-      Address: data.address.address,
-      BirthDate: data.birthDate,
-      Gender: data.gender,
-      Image: data.image,
-      Role: data.role,
-      UserName: data.username,
-      CardNum: data.bank.cardNumber,
-      CardType: data.bank.cardType,
-      CardExp: data.bank.cardExpire,
-      Currency: data.bank.currency,
-      Company: data.company.department,
-      ComapanyName: data.company.name,
-      Title: data.company.title,
+useEffect(() => {
+    const getData = async () => {
+      const response = await fetch(`https://dummyjson.com/users/${id}`);
+      const data = await response.json();
+      console.log(data);
+      const result = {
+        Country: data.address.country,
+        Address: data.address.address,
+        BirthDate: data.birthDate,
+        Gender: data.gender,
+        Image: data.image,
+        Role: data.role,
+        UserName: data.username,
+        CardNum: data.bank.cardNumber,
+        CardType: data.bank.cardType,
+        CardExp: data.bank.cardExpire,
+        Currency: data.bank.currency,
+        Company: data.company.department,
+        ComapanyName: data.company.name,
+        Title: data.company.title,
+      };
+      setData(result);
     };
-    setData(result); 
-  };
 
- 
-
-  useEffect(() => {
-    getData();
-  }, [id]);
-
+    getData(); // Fetch data when the component is mounted or when 'id' changes.
+  }, [id]); // 'id' is the only dependency now.
   return (
     <div className="details-container">
       <h1 className="detail-heading">Employee Details</h1>
